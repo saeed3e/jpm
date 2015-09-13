@@ -1,0 +1,30 @@
+<main class="mdl-layout__content wrap">
+    <div class="page-content ">
+        <!-- Textfield with Floating Label -->
+        <form class="loginFrm" name="loginForm" ng-submit="loginSubmit()">
+            <p class="hd txtCntr"><span class="icon-lock"></span> Login</p>
+            <div class="row">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+                    <input class="mdl-textfield__input" ng-model="username" name="username" type="text" id="sample3" placeholder="Username"/>  
+                    <label class="mdl-textfield__label" for="sample3"></label>
+                </div>
+                <div  ng-messages="loginForm.username.$error" ng-if="loginForm.username.$dirty || loginForm.$submitted" class="err">
+                </div>
+            </div>
+            <div class="row">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+                    <input class="mdl-textfield__input" ng-model="password" type="password" name="password" id="sample4" placeholder="Password..." />
+                    <label class="mdl-textfield__label" for="sample4"></label>
+                </div>
+                <div  ng-messages="loginForm.password.$error" ng-if="loginForm.password.$dirty || loginForm.$submitted" class="err">
+                </div>
+            </div>
+            <!-- Accent-colored raised button with ripple -->
+            <div class="txtCntr">
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect btns txtCntr">
+                    LOGIN
+                </button>
+            </div>
+        </form>
+    </div>
+</main>

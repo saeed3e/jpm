@@ -1,0 +1,33 @@
+<main class="mdl-layout__content wrap">
+    <div class="page-content">
+        <form novalidate name="jobPostForm" class="jDescrptn" ng-submit="!jobPostForm.$invalid && jobPost()">
+            <p class="hd txtCntr"><span class="icon-checkmark"></span> Apply To Jobs</p>
+            <div ng-repeat="data in jobDetails" class="postdJob">
+                <div class="smry oh apply">                    
+                    <p class="title oh">{{data.title}}</p>
+                    <span class="icon-circle-down" ng-click="clickMe($index)"></span>
+                    <div class="rSec">
+                        <button ng-click="applyJob(data._id)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                            Apply
+                        </button>
+                    </div>
+                </div>
+                <section class="jobWrap" ng-hide="!detailSectn{{$index}}">
+                    <div class="oh">
+                        <label>Job Title:</label>
+                        <p class="content">{{data.title}}</p>
+                    </div>
+                    <div class="oh">
+                        <label>Posted on:</label>
+                        <p class="content">{{data.postedOn | date:'medium'}}</p>
+                    </div>
+                    <div class="oh">
+                        <label>Job discription :</label>
+                        <p class="content">{{data.description}}</p>
+                    </div>
+                </section>
+            </div>
+    </div>
+    </form>
+    </div>
+</main>

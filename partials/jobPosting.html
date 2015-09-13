@@ -1,0 +1,65 @@
+<main class="mdl-layout__content wrap">
+    <div class="page-content">
+        <form novalidate name="jobPostForm" class="jpFrm" ng-submit="!jobPostForm.$invalid && jobPost(false,editableStatus,id)">
+            <p class="hd txtCntr"><span class="icon-clip"></span> Post Job</p>
+            <section class="jpWrap">
+                <div class="row">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo inpt">
+                        <input class="mdl-textfield__input"  ng-model="title" name="title" type="text" id="sample1" placeholder="Please enter job title here..." />
+                        <label class="mdl-textfield__label" for="sample1"></label>
+                    </div>
+                    <div  ng-messages="jobPostForm.title.$error" ng-if="jobPostForm.title.$dirty || jobPostForm.$submitted" class="err">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo inpt">
+                        <input class="mdl-textfield__input"  ng-model="description" name="description" type="text" id="sample2" placeholder="Please enter job discription here..." />                       
+                        <label class="mdl-textfield__label" for="sample2"></label>                      
+                    </div>
+                    <div  ng-messages="jobPostForm.description.$error" ng-if="jobPostForm.description.$dirty || jobPostForm.$submitted" class="err">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo inpt">
+                        <input class="mdl-textfield__input"  ng-model="keywords" name="keywords" type="text" id="sample3" placeholder="Please enter keywords here..." />                        
+                        <label class="mdl-textfield__label" for="sample3"></label>
+                       
+                    </div>
+                    <div  ng-messages="jobPostForm.keywords.$error" ng-if="jobPostForm.keywords.$dirty || jobPostForm.$submitted" class="err">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo inpt">
+                        <input class="mdl-textfield__input"  ng-model="industry" name="industry" type="text" id="sample4" placeholder="Please enter job industry here..." />                          
+                        <label class="mdl-textfield__label" for="sample4"></label>                    
+                    </div>
+                    <div  ng-messages="jobPostForm.industry.$error" ng-if="jobPostForm.industry.$dirty || jobPostForm.$submitted" class="err">
+                    </div>
+                </div>
+                <div class="row slidr">
+                    <label class="lbl">Work experience : <strong>{{exp}} Years</strong></label>
+                    <div class="slidC inpt">                       
+                        <!-- <p class="count"><span>{{exp}}</span> Years</p> -->
+                        <span class="rangeNum">0</span>
+                        <input class="mdl-slider mdl-js-slider" id="tt1" ng-model="exp" name="exp" type="range" min="0" max="50" tabindex="0" />
+                        <span class="rangeNum rRange">50</span>
+                    </div>
+                </div>
+                <div class="row slidr">
+                    <label class="lbl">CTC : <strong>{{ctc}} Lakhs</strong></label>
+                    <div class="slidC inpt">                        
+                        <!-- <p class="count"><span>{{ctc}}</span> Lakh</p> -->
+                        <span class="rangeNum">0</span>
+                        <input class="mdl-slider mdl-js-slider" id="tt2" ng-model="ctc" type="range" min="0" max="50" tabindex="0" />
+                        <span class="rangeNum rRange">50</span>
+                    </div>
+                </div>
+            </section>
+            <div class="txtCntr">
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect txtCntr btns">
+                    {{btnText}}
+                </button>
+            </div>
+        </form>
+    </div>
+</main>

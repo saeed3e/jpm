@@ -1,0 +1,10 @@
+{
+  "name": "af-node-base",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "",
+    "mongodb": "^1.4.19",
+    "mongoose": "^3.8.18"
+  }
+}

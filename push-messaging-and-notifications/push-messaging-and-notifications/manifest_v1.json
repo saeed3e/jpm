@@ -1,0 +1,12 @@
+{
+  "name": "Push Notif POC",
+  "short_name": "Push POC",
+  "icons": [{
+        "src": "images/icon-192x192.png",
+        "sizes": "192x192"
+      }],
+  "start_url": "/",
+  "display": "standalone",
+  "gcm_sender_id": "111653866674",
+  "gcm_user_visible_only": true
+}

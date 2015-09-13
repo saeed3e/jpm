@@ -1,0 +1,34 @@
+<main class="mdl-layout__content wrap">
+    <div class="page-content">
+        <form novalidate name="jobPostForm" class="jDescrptn" ng-submit="!jobPostForm.$invalid && jobPost()">
+            <p class="hd txtCntr"><span class="icon-clipboard"></span> Posted Jobs</p>
+            <div ng-repeat="data in jobDetails" class="postdJob">
+                <div class="smry oh">
+                    <span class="aplyCnt"> {{data.applyCount}}</span>
+                    <p class="title oh">{{data.title}}</p>
+                    <span class="icon-circle-down" ng-click="clickMe($index)"></span>
+                    <div class="rSec">
+                        <!-- <div class="mdl-badge" data-badge="{{data.applyCount}}"></div> -->
+                        <span class="icon-pencil" ng-click="editJob(data)"></span>&nbsp;&nbsp;
+                        <span class="icon-bin" ng-click="deleteJob(data._id)"></span>
+                    </div>
+                </div>
+                <section class="jobWrap" ng-hide="!detailSectn{{$index}}">
+                    <div class="oh">
+                        <label>Job Title:</label>
+                        <p class="content">{{data.title}}</p>
+                    </div>
+                    <div class="oh">
+                        <label>Posted on:</label>
+                        <p class="content">{{data.postedOn | date:'medium'}}</p>
+                    </div>
+                    <div class="oh">
+                        <label>Job discription :</label>
+                        <p class="content">{{data.description}}</p>
+                    </div>
+                </section>
+            </div>
+    </div>
+    </form>
+    </div>
+</main>
