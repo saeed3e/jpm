@@ -1,3 +1,3 @@
-# jpm (Angular app)
+# JPM (Angular App)
 
 ##Jobposting Manager Web App
